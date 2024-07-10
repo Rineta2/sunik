@@ -7,7 +7,6 @@ export const metadata = {
   author: "rineta",
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
-  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIVICATION,
 };
 
 const Head = () => {
