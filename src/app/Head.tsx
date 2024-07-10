@@ -22,13 +22,9 @@ const Head = () => {
       <meta name="keywords" content={metadata.keywords} />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
-      {/* <link rel="canonical" href={canonicalUrl} /> */}
-      {/* <link rel="icon" href={faviconUrl} /> */}
-      {/* <link rel="apple-touch-icon" href={faviconUrl} /> */}
-      {/* <link rel="shortcut icon" href={faviconUrl} type="image/x-icon" /> */}
       <meta
         name="google-site-verification"
-        content={metadata.googleSiteVerification}
+        content="PPFLRECsv286Qh9u6AsO2sLWattnKN-Z2BsNEMKprsk"
       />
     </React.Fragment>
   );
