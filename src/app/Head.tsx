@@ -7,7 +7,7 @@ export const metadata = {
   author: "rineta",
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
-  // verification: process.env.NEXT_PUBLIC_VERIFICATION,
+  verification: process.env.NEXT_PUBLIC_VERIFICATION,
   // googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIVICATION,
 };
 
@@ -27,7 +27,7 @@ const Head = () => {
       {/* <link rel="icon" href={faviconUrl} /> */}
       {/* <link rel="apple-touch-icon" href={faviconUrl} /> */}
       {/* <link rel="shortcut icon" href={faviconUrl} type="image/x-icon" /> */}
-      {/* <meta name="verification" content={metadata.verification} /> */}
+      <meta name="verification" content={metadata.verification} />
     </React.Fragment>
   );
 };
