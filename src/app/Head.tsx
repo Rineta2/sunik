@@ -7,6 +7,8 @@ export const metadata = {
   author: "rineta",
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
+  viewport: "width=device-width, initial-scale=1",
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIFICATION,
 };
 
 const siteUrl = "https://sunik-johan";
@@ -74,7 +76,7 @@ const Head = () => {
       <meta name="googlebot" content="index, follow" />
       <meta
         name="google-site-verification"
-        content="PPFLRECsv286Qh9u6AsO2sLWattnKN-Z2BsNEMKprsk"
+        content={metadata.googleSiteVerification}
       />
       <link rel="canonical" href={canonicalUrl} />
       <link rel="icon" href={faviconUrl} />
