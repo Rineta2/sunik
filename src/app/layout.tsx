@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 import "@/components/sass/globals.scss";
 
@@ -6,25 +6,10 @@ import { Open_Sans as OpenSans } from "next/font/google";
 
 const openSans = OpenSans({ subsets: ["latin"] });
 
-import dynamic from "next/dynamic";
-
-import { ComponentType } from "react";
-
 import Head from "@/app/Head";
 
-const Header: ComponentType<{}> = dynamic(
-  () => import("@/components/layout/Header"),
-  {
-    ssr: false,
-  }
-);
-
-const Footer: ComponentType<{}> = dynamic(
-  () => import("@/components/layout/Footer"),
-  {
-    ssr: false,
-  }
-);
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -33,8 +18,8 @@ type RootLayoutProps = {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <Head />
       <body className={openSans.className}>
+        <Head />
         <main>
           <Header />
           {children}

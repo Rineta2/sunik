@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 
 export const metadata = {
   title: "Sunik Johan",
@@ -64,7 +64,7 @@ const Head = () => {
   const jsonLdString = JSON.stringify(jsonLd);
 
   return (
-    <React.Fragment>
+    <Fragment>
       <title>{metadata.title}</title>
       <meta charSet="UTF-8" />
       <meta name="version" content="1.0" />
@@ -86,7 +86,7 @@ const Head = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
-    </React.Fragment>
+    </Fragment>
   );
 };
 
