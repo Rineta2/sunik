@@ -2,32 +2,49 @@ import dynamic from "next/dynamic";
 
 import { Fragment } from "react";
 
-const Home = dynamic(() => import("@/components/section/Home"), {
-  ssr: false,
-});
+import { ComponentType } from "react";
 
-const About = dynamic(() => import("@/components/section/About"), {
-  ssr: false,
-});
+const Home: ComponentType<{}> = dynamic(
+  () => import("@/components/section/Home"),
+  {
+    ssr: false,
+  }
+);
 
-const Services = dynamic(() => import("@/components/section/Services"), {
-  ssr: false,
-});
+const About: ComponentType<{}> = dynamic(
+  () => import("@/components/section/About"),
+  {
+    ssr: false,
+  }
+);
 
-const Product = dynamic(() => import("@/components/section/Product"), {
-  ssr: false,
-});
+const Services: ComponentType<{}> = dynamic(
+  () => import("@/components/section/Services"),
+  {
+    ssr: false,
+  }
+);
 
-const Testimonials = dynamic(
+const Product: ComponentType<{}> = dynamic(
+  () => import("@/components/section/Product"),
+  {
+    ssr: false,
+  }
+);
+
+const Testimonials: ComponentType<{}> = dynamic(
   () => import("@/components/section/Testimonials"),
   {
     ssr: false,
   }
 );
 
-const Contact = dynamic(() => import("@/components/section/Contact"), {
-  ssr: false,
-});
+const Contact: ComponentType<{}> = dynamic(
+  () => import("@/components/section/Contact"),
+  {
+    ssr: false,
+  }
+);
 
 export default function page() {
   return (

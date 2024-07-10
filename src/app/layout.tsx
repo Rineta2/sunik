@@ -8,15 +8,23 @@ const openSans = OpenSans({ subsets: ["latin"] });
 
 import dynamic from "next/dynamic";
 
+import { ComponentType } from "react";
+
 import Head from "@/app/Head";
 
-export const Header = dynamic(() => import("@/components/layout/Header"), {
-  ssr: false,
-});
+const Header: ComponentType<{}> = dynamic(
+  () => import("@/components/layout/Header"),
+  {
+    ssr: false,
+  }
+);
 
-export const Footer = dynamic(() => import("@/components/layout/Footer"), {
-  ssr: false,
-});
+const Footer: ComponentType<{}> = dynamic(
+  () => import("@/components/layout/Footer"),
+  {
+    ssr: false,
+  }
+);
 
 type RootLayoutProps = {
   children: ReactNode;
