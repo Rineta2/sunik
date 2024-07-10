@@ -7,8 +7,8 @@ export const metadata = {
   author: "rineta",
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
-  verification: process.env.NEXT_PUBLIC_VERIFICATION,
-  // googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIVICATION,
+  // verification: process.env.NEXT_PUBLIC_VERIFICATION,
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIVICATION,
 };
 
 const Head = () => {
@@ -27,7 +27,10 @@ const Head = () => {
       {/* <link rel="icon" href={faviconUrl} /> */}
       {/* <link rel="apple-touch-icon" href={faviconUrl} /> */}
       {/* <link rel="shortcut icon" href={faviconUrl} type="image/x-icon" /> */}
-      <meta name="verification" content={metadata.verification} />
+      <meta
+        name="google-site-verification"
+        content={metadata.googleSiteVerification}
+      />
     </React.Fragment>
   );
 };
