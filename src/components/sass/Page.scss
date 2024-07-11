@@ -245,13 +245,157 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      border-radius: 24px;
       overflow: hidden;
 
       img {
         width: 100%;
         height: auto;
         object-fit: cover;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-items: center;
+      gap: 2rem;
+      margin-top: 1rem;
+
+      .box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .text {
+          padding: 1rem 5%;
+          h3 {
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            color: $title-c;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+          }
+
+          span {
+            font-size: 1.2rem;
+            font-family: $sec-f;
+            font-weight: 800;
+          }
+
+          .btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            gap: 1rem;
+            width: 100%;
+
+            .details {
+              width: 150px;
+              height: 50px;
+              background-color: transparent;
+              display: grid;
+              place-items: center;
+              border-radius: 6px;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                background-color: $primary-c;
+                color: $body-c;
+              }
+            }
+
+            .checkout {
+              width: 150px;
+              height: 50px;
+              background-color: $primary-c;
+              display: grid;
+              place-items: center;
+              color: $body-c;
+              border-radius: 6px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .filters__buttons {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        width: 100px;
+        height: 40px;
+        color: $title-c;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &.active {
+          background-color: $primary-c;
+          color: $body-c;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+//==================== Testimonials ====================//
+
+.testimonials {
+  &__container {
+    padding: 1rem 5%;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          object-fit: cover;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          letter-spacing: 1px;
+          margin-bottom: 1rem;
+          font-weight: 800;
+          font-family: $sec-f;
+        }
+
+        p {
+          font-size: 1.12rem;
+          line-height: 1.5;
+        }
       }
     }
   }

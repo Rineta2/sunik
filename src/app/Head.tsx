@@ -8,7 +8,7 @@ export const metadata = {
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
   viewport: "width=device-width, initial-scale=1",
-  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIFICATION,
+  googleSiteVerification: process.env.GOOGLESITEVERIFICATION,
 };
 
 const siteUrl = "https://sunik-johan";

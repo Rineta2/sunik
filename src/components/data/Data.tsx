@@ -14,6 +14,7 @@ import { GiDrinking } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
 import { RiDrinksFill } from "react-icons/ri";
 
+//================ Data Notfound ================//
 import notFoundImg from "@/components/assets/favicon.jpg";
 
 //================ Data Home ================//
@@ -24,14 +25,15 @@ import bgHome from "@/components/assets/home/bg.jpg";
 import aboutImg from "@/components/assets/about/tes.jpg";
 
 //================ Data Services ================//
-
 import fastimg from "@/components/assets/services/Fast.png";
 import onlineimg from "@/components/assets/services/Online.png";
 import codimg from "@/components/assets/services/COD.png";
 
 //================ Data Banner ================//
-
 import banner from "@/components/assets/banner/banner.png";
+
+//================ Data Banner ================//
+import testi_1 from "@/components/assets/testi/testi1.png";
 
 //================ Header ================//
 
@@ -163,6 +165,38 @@ export const bannerImg = [
   {
     id: 1,
     img: banner,
+  },
+];
+
+//================ Testimonials ================//
+
+export const headTesti = [
+  {
+    id: 1,
+    title: "Testimonial",
+  },
+];
+
+export const testiData = [
+  {
+    id: 1,
+    name: "Random Name",
+    img: testi_1,
+    desc: "Popice Boba Sunik benar-benar menyegarkan! Kombinasi es krim popice yang creamy dengan boba kenyal membuat setiap tegukan begitu lezat. Cocok dinikmati di hari panas. Saya pasti akan membelinya lagi!",
+  },
+
+  {
+    id: 2,
+    name: "Random Name",
+    img: testi_1,
+    desc: "Saya mencoba Popice Boba Sunik dan langsung jatuh cinta dengan rasanya. Perpaduan manis es krim popice dan tekstur unik boba membuat minuman ini menjadi favorit baru saya. Minuman ini memberi kejutan rasa yang menyenangkan di setiap seruput.",
+  },
+
+  {
+    id: 3,
+    name: "Random Name",
+    img: testi_1,
+    desc: "Popice Boba Sunik adalah penyelamat dahaga saya setelah seharian beraktivitas. Rasa es krim yang kaya dan boba yang kenyal menciptakan kombinasi yang sempurna. Rasanya benar-benar memuaskan dan sangat menghibur!",
   },
 ];
 

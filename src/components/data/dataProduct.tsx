@@ -11,13 +11,28 @@ import menu_6 from "@/components/assets/menu/Menu_6.jpg";
 export const headProduct = [
   {
     id: 1,
-    title: "Product",
+    title: "Varian Rasa Menu Kami",
   },
 ];
+
 export const bgProduct = [
   {
     id: 1,
     img: bgProductImg,
+  },
+];
+
+export const filterButtons = [
+  {
+    id: 1,
+    name: "SMALL",
+    category: "small",
+  },
+
+  {
+    id: 2,
+    name: "BIG",
+    category: "big",
   },
 ];
 
@@ -72,6 +87,15 @@ export const dataProduct = [
     img: menu_6,
     title: "Vanila Blue",
     category: "small",
+    desc: "Untuk Harga Offline Lebih Murah Dan Cod",
+    price: "Rp. 5.000",
+  },
+
+  {
+    id: 7,
+    img: menu_1,
+    title: "Vanila Blue",
+    category: "big",
     desc: "Untuk Harga Offline Lebih Murah Dan Cod",
     price: "Rp. 5.000",
   },
