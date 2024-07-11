@@ -1,1 +1,258 @@
 @import "./globals.scss";
+
+//==================== Home ====================//
+
+.home {
+  position: relative;
+  min-height: 100vh;
+
+  &__container {
+    padding: 1rem 5%;
+
+    .content {
+      position: absolute;
+      background-color: $body-c;
+      padding: 4rem 5%;
+      width: 80%;
+      height: 100%;
+      top: 65%;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        span {
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          color: $text-c;
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          line-height: 1.5;
+          font-family: $sec-f;
+          letter-spacing: 1px;
+        }
+
+        .img {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 50px;
+            object-position: center bottom;
+          }
+        }
+      }
+    }
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+//==================== About ====================//
+
+.about {
+  position: relative;
+  margin-top: 15rem;
+
+  &__container {
+    padding: 1rem 5%;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .img {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+          object-position: center bottom;
+        }
+      }
+
+      .text {
+        width: 100%;
+        .box {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+          }
+
+          h1 {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            font-weight: 800;
+            font-family: $sec-f;
+            margin-bottom: 1.5rem;
+            color: $primary-c;
+          }
+
+          p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+          }
+
+          .btn {
+            width: 150px;
+            height: 50px;
+            background-color: $primary-c;
+            display: grid;
+            place-items: center;
+            border-radius: 6px;
+
+            a {
+              color: $body-c;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//==================== Services ====================//
+
+.services {
+  &__container {
+    padding: 1rem 5%;
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      background-color: transparent;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 2rem 5%;
+      margin-top: 2rem;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          letter-spacing: 1px;
+          line-height: 1.5;
+          font-family: $sec-f;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+//==================== Services ====================//
+
+.banner {
+  &__container {
+    padding: 1rem 5%;
+    position: relative;
+    min-height: 100vh;
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 24px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//==================== Product ====================//
+
+.product {
+  position: relative;
+  min-height: 100vh;
+
+  &__container {
+    padding: 1rem 5%;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 24px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

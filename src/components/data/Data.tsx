@@ -14,20 +14,24 @@ import { GiDrinking } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
 import { RiDrinksFill } from "react-icons/ri";
 
-import notFoundImg from "@/app/Favicon.png";
+import notFoundImg from "@/components/assets/favicon.jpg";
 
-//================ Not Found ================//
+//================ Data Home ================//
+import homeImg from "@/components/assets/home/home.jpg";
+import bgHome from "@/components/assets/home/bg.jpg";
 
-export const dataNotFound = [
-  {
-    id: 1,
-    img: notFoundImg,
-    title: "Apakah hari ini hari jumat?",
-    desc: "Maaf, hal ini tidak seharusnya terjadi. Coba kembali atau pulang",
-    name: "Kembali ke Beranda",
-    path: "/",
-  },
-];
+//================ Data About ================//
+import aboutImg from "@/components/assets/about/tes.jpg";
+
+//================ Data Services ================//
+
+import fastimg from "@/components/assets/services/Fast.png";
+import onlineimg from "@/components/assets/services/Online.png";
+import codimg from "@/components/assets/services/COD.png";
+
+//================ Data Banner ================//
+
+import banner from "@/components/assets/banner/banner.png";
 
 //================ Header ================//
 
@@ -80,6 +84,85 @@ export const navLogo = [
     id: 1,
     title: "Sunik Johan",
     icons: <RiDrinksFill />,
+  },
+];
+
+//================ Home ================//
+
+export const dataHome = [
+  {
+    id: 1,
+    text: "All your contracts. From all departments. In one place.",
+    title: "The simple way to get your contracts under control",
+    img: homeImg,
+  },
+];
+
+export const dataBg = [
+  {
+    id: 1,
+    img: bgHome,
+  },
+];
+
+//================ About ================//
+
+export const imgAbout = [
+  {
+    id: 1,
+    img: aboutImg,
+  },
+];
+
+export const dataAbout = [
+  {
+    id: 1,
+    text: "Tentang Kami",
+    title: "Apa Yang Membuat Sunik Istimewa ?",
+    desc: "Kedai Sunik Juga Menjual Semacam [ Sosis Goreng, Nuget, Otak-Otak, Cireng, Basreng Dan Menyediakan Minuman, Sunik Boba Varian Rasa Seperti Pop Ice, Serta Menjual Makanan Goreng Ringan",
+    name: "Big Size",
+    path: "#big-size",
+  },
+];
+
+//================ Services ================//
+
+export const dataHeading = [
+  {
+    id: 1,
+    title: "Layanan Kami",
+  },
+];
+
+export const dataServices = [
+  {
+    id: 1,
+    img: codimg,
+    title: "Bayar Di Tempat",
+    desc: "Metode Pembayaran Yang Dilakukan Secara Langsung Di Tempat Setelah Pesanan Dari Kurir Diterima Oleh Pembeli. Dengan Kata Lain, COD Artinya Pilihan Metode Pembayaran",
+  },
+
+  {
+    id: 2,
+    img: onlineimg,
+    title: "Pesan Online",
+    desc: "Online Payment Mengacu Pada Sistem Pembayaran Yang Dilakukan Secara Online Dengan Melibatkan Penggunaan Jaringan Komputer, Internet, Dan Layanan Keuangan Digital. Sistem Pembayaran Ini Sering Juga Disebut E-Payment Atau Pembayaran Elektronik.",
+  },
+
+  {
+    id: 3,
+    img: fastimg,
+    title: "Merespon Dengan Cepat",
+    desc: "Kami berkomitmen untuk merespons setiap kebutuhan pelanggan dengan cepat dan efisien. Pendekatan ini tidak hanya meningkatkan kepuasan pelanggan tetapi juga memperkuat reputasi kami sebagai penyedia layanan yang responsif dan terpercaya di pasar.",
+  },
+];
+
+//================ Banner ================//
+
+export const bannerImg = [
+  {
+    id: 1,
+    img: banner,
   },
 ];
 
@@ -214,5 +297,18 @@ export const infoContact = [
     icons: <FaLocationArrow />,
     name: "Kp Dukuh Rt 03 Rw 08 Desa Cibadak Ciampea Bogor",
     path: "https://maps.app.goo.gl/mESrNXSpU1vrw5Ec6",
+  },
+];
+
+//================ Not Found ================//
+
+export const dataNotFound = [
+  {
+    id: 1,
+    img: notFoundImg,
+    title: "Apakah hari ini hari jumat?",
+    desc: "Maaf, hal ini tidak seharusnya terjadi. Coba kembali atau pulang",
+    name: "Kembali ke Beranda",
+    path: "/",
   },
 ];

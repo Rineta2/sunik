@@ -25,6 +25,13 @@ const Services: ComponentType<{}> = dynamic(
   }
 );
 
+const Banner: ComponentType<{}> = dynamic(
+  () => import("@/components/section/Banner"),
+  {
+    ssr: false,
+  }
+);
+
 const Product: ComponentType<{}> = dynamic(
   () => import("@/components/section/Product"),
   {
@@ -52,6 +59,7 @@ export default function page() {
       <Home />
       <About />
       <Services />
+      <Banner />
       <Product />
       <Testimonials />
       <Contact />

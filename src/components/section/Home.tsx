@@ -1,5 +1,48 @@
-import React from "react";
+import { dataHome, dataBg } from "@/components/data/Data";
+
+import Image from "next/image";
+
+import "@/components/sass/Page.scss";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <section className="home" id="home">
+      <div className="home__container container grid">
+        <div className="content">
+          {dataHome.map((item) => {
+            return (
+              <div className="box" key={item.id}>
+                <span>{item.text}</span>
+                <h1>{item.title}</h1>
+                <div className="img">
+                  <Image
+                    src={item.img}
+                    alt="home"
+                    quality={100}
+                    width={500}
+                    height={500}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="bg">
+        {dataBg.map((bg) => {
+          return (
+            <Image
+              key={bg.id}
+              src={bg.img}
+              alt="home"
+              quality={100}
+              width={500}
+              height={500}
+            />
+          );
+        })}
+      </div>
+    </section>
+  );
 }
