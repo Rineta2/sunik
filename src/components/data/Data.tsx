@@ -200,6 +200,42 @@ export const testiData = [
   },
 ];
 
+//================ Contact ================//
+
+export const headContact = [
+  {
+    id: 1,
+    title: "Contact",
+  },
+];
+
+export const dataContact = [
+  {
+    id: 1,
+    icons: <FaWhatsapp />,
+    title: "Whatsapp",
+    desc: "Whatsapp Sunik Johan",
+    name: "Contact",
+    path: "https://wa.me/+6281284258290",
+  },
+
+  {
+    id: 2,
+    icons: <FaInstagram />,
+    title: "Intastagram",
+    desc: "Instagram Sunik Johan",
+    name: "Contact",
+    path: "https://instagram.com/kedai_sunik?igshid=ZDdkNTZiNTM=",
+  },
+];
+
+export const maps = [
+  {
+    id: 1,
+    frame:
+      "https://www.google.com/maps/embed?pb=!4v1720769430744!6m8!1m7!1sg99tOCxGYjYk3iDXv4Oxew!2m2!1d-6.564741844724457!2d106.6840749677068!3f210.07875!4f0!5f0.7820865974627469",
+  },
+];
 //================ Footer ================//
 
 export const socialLink = [
