@@ -80,7 +80,7 @@
           object-position: center bottom;
 
           @media only screen and (max-width: 992px) {
-            height: 500px;
+            height: 450px;
           }
 
           @media only screen and (max-width: 468px) {
@@ -120,7 +120,7 @@
   position: relative;
 
   &__container {
-    padding: 1rem 5%;
+    padding: 1rem 2%;
 
     @media only screen and (max-width: 992px) {
       padding: 1rem 0;
@@ -129,7 +129,12 @@
     .content {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .img {
         width: 100%;
@@ -163,8 +168,17 @@
             letter-spacing: 1px;
             font-weight: 800;
             font-family: $sec-f;
+            line-height: 1.5;
             margin-bottom: 1.5rem;
             color: $primary-c;
+
+            @media only screen and (max-width: 768px) {
+              font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: 468px) {
+              font-size: 2rem;
+            }
           }
 
           p {
@@ -196,7 +210,11 @@
 
 .services {
   &__container {
-    padding: 1rem 5%;
+    padding: 1rem 2%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
 
     .content {
       display: grid;
@@ -208,6 +226,21 @@
       padding: 2rem 5%;
       margin-top: 2rem;
 
+      @media only screen and (max-width: 992px) {
+        padding: 2rem 2%;
+      }
+
+      @media only screen and (max-width: 468px) {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        gap: 1rem;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
       .box {
         display: flex;
         flex-direction: column;
@@ -217,6 +250,11 @@
           width: 250px;
           height: 250px;
           object-fit: cover;
+
+          @media only screen and (max-width: 992px) {
+            width: 200px;
+            height: 200px;
+          }
         }
 
         h3 {

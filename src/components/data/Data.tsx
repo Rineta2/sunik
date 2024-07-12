@@ -116,8 +116,8 @@ export const dataAbout = [
     text: "Tentang Kami",
     title: "Apa Yang Membuat Sunik Istimewa ?",
     desc: "Kedai Sunik Juga Menjual Semacam [ Sosis Goreng, Nuget, Otak-Otak, Cireng, Basreng Dan Menyediakan Minuman, Sunik Boba Varian Rasa Seperti Pop Ice, Serta Menjual Makanan Goreng Ringan",
-    name: "Big Size",
-    path: "#big-size",
+    name: "Product",
+    path: "#product",
   },
 ];
 
