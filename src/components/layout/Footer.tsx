@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="social">
               {socialLink.map((link) => {
                 return (
-                  <div key={link.id}>
+                  <div key={link.id} className="list">
                     <Link href={link.path}>{link.icons}</Link>
                   </div>
                 );

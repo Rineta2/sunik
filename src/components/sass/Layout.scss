@@ -136,7 +136,187 @@ header {
 
 //==================== Footer ====================//
 
+// footer {
+//   @media only screen and (max-width: 992px) {
+//     padding: 1rem 5%;
+//   }
+
+//   .footer__container {
+//     padding: 1rem 5%;
+
+//     @media only screen and (max-width: 992px) {
+//       padding: 1rem 0;
+//     }
+
+//     .content {
+//       display: flex;
+//       justify-content: space-between;
+//       width: 100%;
+//       gap: 1rem;
+
+//       @media only screen and (max-width: 992px) {
+//         flex-wrap: wrap;
+//       }
+
+//       @media only screen and (max-width: 468px) {
+//         flex-direction: column;
+//       }
+
+//       .logo {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 1rem;
+
+//         .profile {
+//           display: flex;
+//           align-items: center;
+//           gap: 0.2rem;
+
+//           i {
+//             font-size: 1.8rem;
+//             color: $primary-c;
+//             margin-top: 0.3rem;
+//           }
+
+//           h3 {
+//             font-size: 1.7rem;
+//             letter-spacing: 1px;
+//             color: $title-c;
+//           }
+//         }
+
+//         .social {
+//           display: flex;
+//           align-items: center;
+//           gap: 1.5rem;
+
+//           .list {
+//             width: 50px;
+//             height: 50px;
+//             display: grid;
+//             place-items: center;
+//             border-radius: 50%;
+//             transition: all 0.3s ease-in-out;
+//             cursor: pointer;
+
+//             &:hover {
+//               background-color: $primary-c;
+
+//               a {
+//                 color: $body-c;
+//               }
+//             }
+
+//             a {
+//               font-size: 1.5rem;
+//               display: grid;
+//               place-items: center;
+//               transition: all 0.3s ease-in-out;
+//             }
+//           }
+//         }
+//       }
+
+//       .tautan {
+//         display: flex;
+//         flex-direction: column;
+
+//         h3 {
+//           font-size: 1.5rem;
+//           margin-bottom: 1rem;
+//         }
+
+//         .box {
+//           display: flex;
+//           flex-direction: column;
+//           margin-bottom: 1rem;
+
+//           a {
+//             color: $text-c;
+//             font-size: 1rem;
+//           }
+//         }
+//       }
+
+//       .jam {
+//         display: flex;
+//         flex-direction: column;
+
+//         h3 {
+//           font-size: 1.5rem;
+//           margin-bottom: 1rem;
+//         }
+
+//         .box {
+//           display: flex;
+//           margin-bottom: 1rem;
+//           gap: 0.3rem;
+
+//           span {
+//             color: $text-c;
+//             font-size: 1rem;
+//           }
+//         }
+//       }
+
+//       .contact {
+//         display: flex;
+//         flex-direction: column;
+
+//         h3 {
+//           font-size: 1.5rem;
+//           margin-bottom: 1rem;
+//         }
+
+//         .box {
+//           display: flex;
+//           flex-direction: column;
+//           margin-bottom: 1rem;
+//           gap: 0.3rem;
+
+//           a {
+//             display: flex;
+//             align-items: center;
+//             gap: 0.3rem;
+
+//             i {
+//               font-size: 1.2rem;
+//               color: $text-c;
+//               margin-top: 0.2rem;
+//             }
+
+//             span {
+//               color: $text-c;
+//               font-size: 1rem;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .copyright {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       text-align: center;
+
+//       p {
+//         font-size: 1.2rem;
+//         letter-spacing: 1px;
+//         color: $text-c;
+
+//         a {
+//           color: $primary-c;
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//   }
+// }
+
 footer {
+  padding: 1rem 5%;
+
   @media only screen and (max-width: 992px) {
     padding: 1rem 5%;
   }
@@ -190,7 +370,7 @@ footer {
           align-items: center;
           gap: 1.5rem;
 
-          li {
+          div {
             width: 50px;
             height: 50px;
             display: grid;
