@@ -1,7 +1,4 @@
-import { IoMdHome } from "react-icons/io";
 import {
-  FaRegUser,
-  FaUsers,
   FaInstagram,
   FaWhatsapp,
   FaTiktok,
@@ -9,9 +6,6 @@ import {
   FaMailBulk,
   FaLocationArrow,
 } from "react-icons/fa";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { GiDrinking } from "react-icons/gi";
-import { TiMessages } from "react-icons/ti";
 import { RiDrinksFill } from "react-icons/ri";
 
 //================ Data Notfound ================//
@@ -41,43 +35,43 @@ export const dataHeader = [
   {
     id: 1,
     name: "Home",
-    icons: <IoMdHome />,
     path: "#home",
+    active: "home",
   },
 
   {
     id: 2,
     name: "About",
-    icons: <FaRegUser />,
     path: "#about",
+    active: "about",
   },
 
   {
     id: 3,
     name: "Services",
-    icons: <MdOutlineDesignServices />,
     path: "#services",
+    active: "services",
   },
 
   {
     id: 4,
     name: "Product",
-    icons: <GiDrinking />,
     path: "#product",
+    active: "product",
   },
 
   {
     id: 5,
     name: "Testimonial",
-    icons: <FaUsers />,
     path: "#testimonials",
+    active: "testimonials",
   },
 
   {
     id: 6,
     name: "Contact",
-    icons: <TiMessages />,
     path: "#contact",
+    active: "contact",
   },
 ];
 
@@ -94,8 +88,8 @@ export const navLogo = [
 export const dataHome = [
   {
     id: 1,
-    text: "All your contracts. From all departments. In one place.",
-    title: "The simple way to get your contracts under control",
+    text: "Selamat Datang Di Website Kami",
+    title: "Sunik Johan",
     img: homeImg,
   },
 ];

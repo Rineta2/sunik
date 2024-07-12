@@ -14,15 +14,13 @@ export default function Home() {
               <div className="box" key={item.id}>
                 <span>{item.text}</span>
                 <h1>{item.title}</h1>
-                <div className="img">
-                  <Image
-                    src={item.img}
-                    alt="home"
-                    quality={100}
-                    width={500}
-                    height={500}
-                  />
-                </div>
+                <Image
+                  src={item.img}
+                  alt="home"
+                  quality={100}
+                  width={500}
+                  height={500}
+                />
               </div>
             );
           })}

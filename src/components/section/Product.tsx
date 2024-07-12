@@ -175,7 +175,7 @@ export default function Product() {
                 <div className="text">
                   <h3>{data.title}</h3>
                   <p>{data.desc}</p>
-                  <span>{data.harga}</span>
+                  <span>Rp. {data.harga}</span>
 
                   <div className="btn">
                     <div
@@ -186,7 +186,7 @@ export default function Product() {
                     </div>
 
                     <div
-                      className="checkout"
+                      className="btn_checkout"
                       onClick={() => handleCheckout(data)}
                     >
                       Beli
@@ -199,7 +199,7 @@ export default function Product() {
         </div>
 
         {selectedProduct && modalType === "details" && (
-          <div className={open ? "modal open" : "modal"}>
+          <div className={`modal ${open ? "open" : "close"}`}>
             {selectedProduct && (
               <div className="modal__content">
                 <div className="img">
@@ -218,7 +218,7 @@ export default function Product() {
                   </div>
 
                   <p>{selectedProduct.desc}</p>
-                  <span className="price">{selectedProduct.price}</span>
+                  <span className="price">Rp. {selectedProduct.harga}</span>
 
                   <div className="modal__close" onClick={closeModal}>
                     <TiTimes className="icons" />
@@ -230,9 +230,10 @@ export default function Product() {
         )}
 
         {selectedProduct && modalType === "checkout" && (
-          <div className={open ? "form open" : "modal"}>
+          <div className={`form ${open ? "open" : "close"}`}>
             <form onSubmit={handleSubmit}>
               <h1>Checkout</h1>
+
               <div className="box">
                 <label>
                   Rasa
@@ -294,30 +295,31 @@ export default function Product() {
                 </label>
               </div>
 
-              <label>
-                Alamat
-                <input
-                  type="text"
-                  value={alamat}
-                  onChange={handleChange(setAlamat)}
-                />
-              </label>
+              <div className="box">
+                <label>
+                  Alamat
+                  <input
+                    type="text"
+                    value={alamat}
+                    onChange={handleChange(setAlamat)}
+                  />
+                </label>
 
-              <label>
-                Pesan
-                <textarea
-                  value={pesan}
-                  onChange={handleChange(setPesan)}
-                ></textarea>
-              </label>
+                <label>
+                  Pesan
+                  <textarea
+                    value={pesan}
+                    onChange={handleChange(setPesan)}
+                  ></textarea>
+                </label>
+              </div>
 
-              <div className="btn">
-                <button className="purchase" type="submit">
-                  Konfirmasi Pembelian
-                </button>
-                <div className="close" onClick={() => setSelectedProduct(null)}>
-                  Keluar
-                </div>
+              <button className="purchase" type="submit">
+                Konfirmasi Pembelian
+              </button>
+
+              <div className="close" onClick={() => setSelectedProduct(null)}>
+                <TiTimes className="icons" />
               </div>
             </form>
           </div>

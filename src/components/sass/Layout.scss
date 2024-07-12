@@ -8,6 +8,27 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: all 0.3s ease-in-out;
+
+  &.fixed {
+    background-color: $body-c;
+
+    nav {
+      .logo {
+        h3 {
+          color: $title-c;
+        }
+      }
+
+      .nav__list {
+        .nav__item {
+          .nav__link {
+            color: $title-c;
+          }
+        }
+      }
+    }
+  }
 
   nav {
     display: flex;
@@ -29,7 +50,7 @@ header {
       h3 {
         font-size: 1.5rem;
         letter-spacing: 1px;
-        color: $title-c;
+        color: $body-c;
       }
     }
 
@@ -37,68 +58,63 @@ header {
       display: flex;
       gap: 2rem;
 
+      &.show {
+        @media only screen and (max-width: 768px) {
+          top: 6%;
+        }
+
+        @media only screen and (max-width: 468px) {
+          top: 7%;
+        }
+      }
+
       @media only screen and (max-width: 768px) {
         position: fixed;
-        top: unset;
-        left: unset;
-        bottom: 2%;
-        left: 21%;
-        transform: translate(0, 0);
-        width: 55%;
-        height: 10%;
-        border-radius: 1rem;
-        padding: 1rem 5%;
+        top: -100%;
+        left: 0;
+        width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        z-index: 999;
-      }
-
-      @media only screen and (max-width: 468px) {
-        width: 90%;
-        height: 10%;
-        left: 5%;
-        gap: 1.5rem;
-      }
-
-      @media only screen and (max-width: 320px) {
-        gap: 1.2rem;
-        height: 15%;
+        height: 50vh;
+        background-color: $body-c;
+        transition: all 0.3s ease-in-out;
       }
 
       .nav__item {
-        a {
-          .title {
-            font-size: 1.1rem;
+        .nav__link {
+          padding: 0.7rem 1rem;
+          border-radius: 6px;
 
-            @media only screen and (max-width: 768px) {
-              display: none;
-            }
+          &.active {
+            background-color: $primary-c;
+            color: $body-c;
           }
 
-          .icons {
-            display: none;
-
-            @media only screen and (max-width: 768px) {
-              display: inline-block;
-              font-size: 2rem;
-              color: $body-c;
-            }
-
-            @media only screen and (max-width: 468px) {
-              display: inline-block;
-              font-size: 1.7rem;
-              color: $body-c;
-            }
-
-            @media only screen and (max-width: 320px) {
-              font-size: 1.5rem;
-            }
-          }
+          font-size: 1.1rem;
+          color: $body-c;
         }
+      }
+    }
+
+    .nav__toggle {
+      display: none;
+
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+
+      .hamburger {
+        font-size: 1.5rem;
+        color: $title-c;
+        cursor: pointer;
+      }
+
+      .close {
+        font-size: 1.5rem;
+        color: $title-c;
+        cursor: pointer;
       }
     }
   }
