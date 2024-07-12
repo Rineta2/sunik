@@ -3,16 +3,16 @@ import { Fragment } from "react";
 export const metadata = {
   title: "Sunik Johan",
   description:
-    "Selamat datang di website kami · Sunik dan Johan Cellular · Apa Yang Membuat Sunik Istimewa ? · Layanan Terbaik Kami · Varian rasa menu kami · Varian Istimewa",
+    "Selamat datang di website kami · Sunik Johan · Apa Yang Membuat Sunik Istimewa ? · Layanan Terbaik Kami · Varian rasa menu kami · Varian Istimewa",
   author: "rineta",
   keywords:
     "Minuman Pop Ice, cibatok, ciampea, kampung dukuh, minuman terdekat",
   viewport: "width=device-width, initial-scale=1",
-  googleSiteVerification: process.env.GOOGLESITEVERIFICATION,
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLESITEVERIFICATION,
 };
 
 const siteUrl = "https://sunik-johan";
-const faviconUrl = `${siteUrl}/favicon.png`;
+const faviconUrl = `${siteUrl}/favicon.ico`;
 const canonicalUrl = `${siteUrl}/`;
 
 const Head = () => {
@@ -20,7 +20,7 @@ const Head = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "rineta",
-    image: "https://sunik.vercel.app/favicon.png",
+    image: "https://sunik.vercel.app/favicon.ico",
     "@id": "https://sunik.vercel.app/",
     url: "https://sunik.vercel.app/",
     telephone: "081284258290",

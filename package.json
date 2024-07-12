@@ -1,7 +1,19 @@
 {
   "name": "sunik",
   "version": "0.1.0",
+  "author": "rineta",
+  "license": "MIT",
+  "type": "module",
   "private": true,
+  "homepage": "https://sunik-johan.vercel.app/",
+  "description": "Selamat datang di website kami · Sunik Johan · Apa Yang Membuat Sunik Istimewa ? · Layanan Terbaik Kami · Varian rasa menu kami · Varian Istimewa",
+  "keywords": [
+    "Minuman Pop Ice",
+    "cibatok",
+    "ciampea",
+    "kampung dukuh",
+    "minuman terdekat"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
