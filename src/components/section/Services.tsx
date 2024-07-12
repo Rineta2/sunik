@@ -20,13 +20,7 @@ export default function Services() {
           {dataServices.map((data) => {
             return (
               <div className="box" key={data.id}>
-                <Image
-                  src={data.img}
-                  alt={"services"}
-                  quality={100}
-                  width={500}
-                  height={500}
-                />
+                <Image src={data.img} alt={"services"} quality={100} />
 
                 <h3>{data.title}</h3>
                 <p>{data.desc}</p>

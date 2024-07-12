@@ -28,50 +28,50 @@ export default function Footer() {
             <div className="social">
               {socialLink.map((link) => {
                 return (
-                  <li key={link.id}>
+                  <div key={link.id}>
                     <Link href={link.path}>{link.icons}</Link>
-                  </li>
+                  </div>
                 );
               })}
             </div>
           </div>
 
-          <ul className="tautan">
+          <div className="tautan">
             <h3>Tautan Langsung</h3>
             {tautanFooter.map((tautan) => {
               return (
-                <li className="box" key={tautan.id}>
+                <div className="box" key={tautan.id}>
                   <Link href={tautan.path}>{tautan.name}</Link>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
 
-          <ul className="jam">
+          <div className="jam">
             <h3>Jam Buka</h3>
             {jamBuka.map((jam) => {
               return (
-                <li className="box" key={jam.id}>
+                <div className="box" key={jam.id}>
                   <span>{jam.name}</span>
                   <span>{jam.date}</span>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
 
-          <ul className="contact">
+          <div className="contact">
             <h3>Info Kontak</h3>
             {infoContact.map((contact) => {
               return (
-                <li className="box" key={contact.id}>
+                <div className="box" key={contact.id}>
                   <Link href={contact.path}>
                     <i>{contact.icons}</i>
                     <span>{contact.name}</span>
                   </Link>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </div>
 
         <div className="copyright">
