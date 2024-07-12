@@ -6,7 +6,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    GOOGLESITEVERIFICATION: process.env.GOOGLESITEVERIFICATION,
+    NEXT_PUBLIC_GOOGLESITEVERIFICATION:
+      process.env.NEXT_PUBLIC_GOOGLESITEVERIFICATION,
   },
 };
 
