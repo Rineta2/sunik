@@ -8,8 +8,15 @@ const openSans = OpenSans({ subsets: ["latin"] });
 
 import Head from "@/app/Head";
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("@/components/layout/Header"), {
+  ssr: false,
+});
+
+const Footer = dynamic(() => import("@/components/layout/Footer"), {
+  ssr: false,
+});
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -23,7 +30,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <main>
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
       </body>
     </html>
