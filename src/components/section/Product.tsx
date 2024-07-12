@@ -314,9 +314,11 @@ export default function Product() {
                 </label>
               </div>
 
-              <button className="purchase" type="submit">
-                Konfirmasi Pembelian
-              </button>
+              <div className="btn">
+                <button className="purchase" type="submit">
+                  Konfirmasi Pembelian
+                </button>
+              </div>
 
               <div className="close" onClick={() => setSelectedProduct(null)}>
                 <TiTimes className="icons" />

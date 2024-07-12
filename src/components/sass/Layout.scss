@@ -27,6 +27,13 @@ header {
           }
         }
       }
+
+      .nav__toggle {
+        .hamburger,
+        .close {
+          color: $title-c;
+        }
+      }
     }
   }
 
@@ -66,6 +73,10 @@ header {
         @media only screen and (max-width: 468px) {
           top: 7%;
         }
+
+        @media only screen and (max-width: 320px) {
+          top: 11%;
+        }
       }
 
       @media only screen and (max-width: 768px) {
@@ -82,18 +93,26 @@ header {
         transition: all 0.3s ease-in-out;
       }
 
+      @media only screen and (max-width: 320px) {
+        height: 70vh;
+      }
+
       .nav__item {
         .nav__link {
-          padding: 0.7rem 1rem;
-          border-radius: 6px;
-
           &.active {
             background-color: $primary-c;
             color: $body-c;
           }
 
+          padding: 0.7rem 1rem;
+          border-radius: 6px;
           font-size: 1.1rem;
           color: $body-c;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 1.3rem;
+            color: $title-c;
+          }
         }
       }
     }
@@ -105,15 +124,10 @@ header {
         display: block;
       }
 
-      .hamburger {
-        font-size: 1.5rem;
-        color: $title-c;
-        cursor: pointer;
-      }
-
+      .hamburger,
       .close {
         font-size: 1.5rem;
-        color: $title-c;
+        color: $body-c;
         cursor: pointer;
       }
     }

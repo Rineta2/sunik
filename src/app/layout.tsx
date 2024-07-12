@@ -23,7 +23,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <main>
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
       </body>
     </html>
