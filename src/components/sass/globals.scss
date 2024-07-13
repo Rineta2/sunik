@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: $body-c;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 85%;
