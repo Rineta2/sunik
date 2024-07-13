@@ -56,6 +56,8 @@ export default function Contact() {
                 width="100%"
                 height="450px"
                 style={{ border: 0 }}
+                title="sunik"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy={"no-referrer-when-downgrade"}

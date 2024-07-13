@@ -190,7 +190,7 @@ export default function Product() {
                     delay={300}
                     duration={1000}
                     direction="down">
-                    <h3>{data.title}</h3>
+                    <h1 className="title__product">{data.title}</h1>
                   </Fade>
 
                   <Fade triggerOnce delay={300} duration={1000}>
@@ -240,7 +240,7 @@ export default function Product() {
                     triggerOnce
                     delay={300}
                     direction="down">
-                    <h3>{selectedProduct.title}</h3>
+                    <h1 className="title__details">{selectedProduct.title}</h1>
                   </Fade>
 
                   <div className="category__details">

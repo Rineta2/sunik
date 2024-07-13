@@ -423,7 +423,7 @@
 
         .text {
           padding: 1rem 5%;
-          h3 {
+          .title__product {
             font-size: 1.3rem;
             letter-spacing: 1px;
             color: $title-c;
@@ -574,7 +574,7 @@
             width: 100%;
           }
 
-          h3 {
+          .title__details {
             font-size: 2rem;
             margin-bottom: 1rem;
             letter-spacing: 1px;

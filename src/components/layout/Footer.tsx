@@ -51,7 +51,9 @@ export default function Footer() {
                       delay={300}
                       duration={1000}
                       direction="up">
-                      <Link href={link.path}>{link.icons}</Link>
+                      <Link href={link.path} className="social__link">
+                        {link.icons}
+                      </Link>
                     </Fade>
                   </div>
                 );
