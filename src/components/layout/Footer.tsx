@@ -1,3 +1,7 @@
+"use client";
+
+import { Fade } from "react-awesome-reveal";
+
 import {
   socialLink,
   tautanFooter,
@@ -19,8 +23,21 @@ export default function Footer() {
             {navLogo.map((logo) => {
               return (
                 <div className="profile" key={logo.id}>
-                  <i>{logo.icons}</i>
-                  <h3>{logo.title}</h3>
+                  <Fade
+                    triggerOnce
+                    delay={300}
+                    duration={1000}
+                    direction="left">
+                    <i>{logo.icons}</i>
+                  </Fade>
+
+                  <Fade
+                    triggerOnce
+                    delay={300}
+                    duration={1000}
+                    direction="right">
+                    <h3>{logo.title}</h3>
+                  </Fade>
                 </div>
               );
             })}
@@ -29,7 +46,13 @@ export default function Footer() {
               {socialLink.map((link) => {
                 return (
                   <div key={link.id} className="list">
-                    <Link href={link.path}>{link.icons}</Link>
+                    <Fade
+                      triggerOnce
+                      delay={300}
+                      duration={1000}
+                      direction="up">
+                      <Link href={link.path}>{link.icons}</Link>
+                    </Fade>
                   </div>
                 );
               })}
@@ -37,37 +60,50 @@ export default function Footer() {
           </div>
 
           <div className="tautan">
-            <h3>Tautan Langsung</h3>
+            <Fade triggerOnce delay={300} duration={1000} direction="down">
+              <h3>Tautan Langsung</h3>
+            </Fade>
+
             {tautanFooter.map((tautan) => {
               return (
                 <div className="box" key={tautan.id}>
-                  <Link href={tautan.path}>{tautan.name}</Link>
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <Link href={tautan.path}>{tautan.name}</Link>
+                  </Fade>
                 </div>
               );
             })}
           </div>
 
           <div className="jam">
-            <h3>Jam Buka</h3>
+            <Fade triggerOnce delay={300} duration={1000} direction="down">
+              <h3>Jam Buka</h3>
+            </Fade>
             {jamBuka.map((jam) => {
               return (
                 <div className="box" key={jam.id}>
-                  <span>{jam.name}</span>
-                  <span>{jam.date}</span>
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <span>{jam.name}</span>
+                    <span>{jam.date}</span>
+                  </Fade>
                 </div>
               );
             })}
           </div>
 
           <div className="contact">
-            <h3>Info Kontak</h3>
+            <Fade triggerOnce delay={300} duration={1000} direction="down">
+              <h3>Info Kontak</h3>
+            </Fade>
             {infoContact.map((contact) => {
               return (
                 <div className="box" key={contact.id}>
-                  <Link href={contact.path}>
-                    <i>{contact.icons}</i>
-                    <span>{contact.name}</span>
-                  </Link>
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <Link href={contact.path}>
+                      <i>{contact.icons}</i>
+                      <span>{contact.name}</span>
+                    </Link>
+                  </Fade>
                 </div>
               );
             })}
@@ -75,10 +111,13 @@ export default function Footer() {
         </div>
 
         <div className="copyright">
-          <p>
-            &copy; 2022 <Link href={"https://rineta.vercel.app/"}>rineta</Link>.
-            All Rights Reserved
-          </p>
+          <Fade triggerOnce delay={300} duration={1000} direction="up">
+            <p>
+              &copy; 2022{" "}
+              <Link href={"https://rineta.vercel.app/"}>rineta</Link>. All
+              Rights Reserved
+            </p>
+          </Fade>
         </div>
       </div>
     </footer>

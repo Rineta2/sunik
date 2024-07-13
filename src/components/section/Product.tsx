@@ -13,6 +13,8 @@ import {
 
 import Image from "next/image";
 
+import { Fade, JackInTheBox } from "react-awesome-reveal";
+
 import "@/components/sass/Page.scss";
 
 export default function Product() {
@@ -131,7 +133,9 @@ export default function Product() {
         {headProduct.map((head) => {
           return (
             <div className="heading" key={head.id}>
-              <h1>{head.title}</h1>
+              <JackInTheBox triggerOnce delay={300} duration={1000}>
+                <h1>{head.title}</h1>
+              </JackInTheBox>
             </div>
           );
         })}
@@ -153,15 +157,21 @@ export default function Product() {
         <div className="filters__buttons">
           {filterButtons.map((button) => {
             return (
-              <button
+              <Fade
+                triggerOnce
+                delay={300}
+                duration={1000}
                 key={button.id}
-                className={
-                  button.category === selectedCategory ? "active" : "small"
-                }
-                onClick={() => handleFilter(button.category)}
-              >
-                {button.name}
-              </button>
+                direction="down">
+                <button
+                  key={button.id}
+                  className={
+                    button.category === selectedCategory ? "active" : "small"
+                  }
+                  onClick={() => handleFilter(button.category)}>
+                  {button.name}
+                </button>
+              </Fade>
             );
           })}
         </div>
@@ -170,28 +180,42 @@ export default function Product() {
           {filteredData.map((data) => {
             return (
               <div className="box" key={data.id}>
-                <Image src={data.img} alt="product" quality={100} />
+                <Fade triggerOnce delay={300} duration={1000} direction="down">
+                  <Image src={data.img} alt="product" quality={100} />
+                </Fade>
 
                 <div className="text">
-                  <h3>{data.title}</h3>
-                  <p>{data.desc}</p>
-                  <span>Rp. {data.harga}</span>
+                  <Fade
+                    triggerOnce
+                    delay={300}
+                    duration={1000}
+                    direction="down">
+                    <h3>{data.title}</h3>
+                  </Fade>
 
-                  <div className="btn">
-                    <div
-                      className="details"
-                      onClick={() => handleDetails(data)}
-                    >
-                      Lihat Details
-                    </div>
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <p>{data.desc}</p>
+                  </Fade>
 
-                    <div
-                      className="btn_checkout"
-                      onClick={() => handleCheckout(data)}
-                    >
-                      Beli
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <span>Rp. {data.harga}</span>
+                  </Fade>
+
+                  <Fade triggerOnce delay={300} duration={1000} direction="up">
+                    <div className="btn">
+                      <div
+                        className="details"
+                        onClick={() => handleDetails(data)}>
+                        Lihat Details
+                      </div>
+
+                      <div
+                        className="btn_checkout"
+                        onClick={() => handleCheckout(data)}>
+                        Beli
+                      </div>
                     </div>
-                  </div>
+                  </Fade>
                 </div>
               </div>
             );
@@ -211,14 +235,41 @@ export default function Product() {
                 </div>
 
                 <div className="modal__text">
-                  <h3>{selectedProduct.title}</h3>
+                  <Fade
+                    duration={1000}
+                    triggerOnce
+                    delay={300}
+                    direction="down">
+                    <h3>{selectedProduct.title}</h3>
+                  </Fade>
+
                   <div className="category__details">
-                    <span className="size">{selectedProduct.size}</span>
-                    <span className="category">{selectedProduct.category}</span>
+                    <Fade
+                      triggerOnce
+                      delay={300}
+                      duration={1000}
+                      direction="left">
+                      <span className="size">{selectedProduct.size}</span>
+                    </Fade>
+
+                    <Fade
+                      triggerOnce
+                      delay={300}
+                      duration={1000}
+                      direction="right">
+                      <span className="category">
+                        {selectedProduct.category}
+                      </span>
+                    </Fade>
                   </div>
 
-                  <p>{selectedProduct.desc}</p>
-                  <span className="price">Rp. {selectedProduct.harga}</span>
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <p>{selectedProduct.desc}</p>
+                  </Fade>
+
+                  <Fade triggerOnce delay={300} duration={1000} direction="up">
+                    <span className="price">Rp. {selectedProduct.harga}</span>
+                  </Fade>
 
                   <div className="modal__close" onClick={closeModal}>
                     <TiTimes className="icons" />
@@ -309,8 +360,7 @@ export default function Product() {
                   Pesan
                   <textarea
                     value={pesan}
-                    onChange={handleChange(setPesan)}
-                  ></textarea>
+                    onChange={handleChange(setPesan)}></textarea>
                 </label>
               </div>
 

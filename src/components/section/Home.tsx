@@ -1,3 +1,7 @@
+"use client";
+
+import { Fade } from "react-awesome-reveal";
+
 import { dataHome, dataBg } from "@/components/data/Data";
 
 import Image from "next/image";
@@ -12,8 +16,14 @@ export default function Home() {
           {dataHome.map((item) => {
             return (
               <div className="box" key={item.id}>
-                <span>{item.text}</span>
-                <h1>{item.title}</h1>
+                <Fade triggerOnce delay={300} duration={1000} direction="down">
+                  <span>{item.text}</span>
+                </Fade>
+
+                <Fade triggerOnce delay={300} duration={1000}>
+                  <h1>{item.title}</h1>
+                </Fade>
+
                 <Image
                   src={item.img}
                   alt="home"

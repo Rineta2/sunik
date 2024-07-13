@@ -1,3 +1,7 @@
+"use client";
+
+import { Fade } from "react-awesome-reveal";
+
 import { bannerImg } from "@/components/data/Data";
 
 import "@/components/sass/Page.scss";
@@ -11,13 +15,15 @@ export default function Banner() {
         {bannerImg.map((img) => {
           return (
             <div className="banner" key={img.id}>
-              <Image
-                src={img.img}
-                alt="banner"
-                quality={100}
-                width={500}
-                height={500}
-              />
+              <Fade triggerOnce delay={300} duration={1000} direction="down">
+                <Image
+                  src={img.img}
+                  alt="banner"
+                  quality={100}
+                  width={500}
+                  height={500}
+                />
+              </Fade>
             </div>
           );
         })}

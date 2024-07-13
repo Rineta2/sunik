@@ -1,3 +1,7 @@
+"use client";
+
+import { Fade, JackInTheBox } from "react-awesome-reveal";
+
 import { dataContact, headContact, maps } from "@/components/data/Data";
 
 import "@/components/sass/Page.scss";
@@ -11,7 +15,9 @@ export default function Contact() {
         {headContact.map((head) => {
           return (
             <div className="heading" key={head.id}>
-              <h1>{head.title}</h1>
+              <JackInTheBox triggerOnce delay={300} duration={1000}>
+                <h1>{head.title}</h1>
+              </JackInTheBox>
             </div>
           );
         })}
@@ -20,12 +26,23 @@ export default function Contact() {
           {dataContact.map((item) => {
             return (
               <div className="box" key={item.id}>
-                <div className="icons">{item.icons}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-                <div className="btn">
-                  <Link href={item.path}>{item.name}</Link>
-                </div>
+                <Fade triggerOnce delay={300} duration={1000} direction="down">
+                  <div className="icons">{item.icons}</div>
+                </Fade>
+
+                <Fade triggerOnce delay={300} duration={1000} direction="left">
+                  <h3>{item.title}</h3>
+                </Fade>
+
+                <Fade triggerOnce delay={300} duration={1000} direction="right">
+                  <p>{item.desc}</p>
+                </Fade>
+
+                <Fade triggerOnce delay={300} duration={1000} direction="up">
+                  <div className="btn">
+                    <Link href={item.path}>{item.name}</Link>
+                  </div>
+                </Fade>
               </div>
             );
           })}
@@ -42,8 +59,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy={"no-referrer-when-downgrade"}
-                key={map.id}
-              ></iframe>
+                key={map.id}></iframe>
             );
           })}
         </div>

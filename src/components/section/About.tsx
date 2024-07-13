@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { Fade } from "react-awesome-reveal";
 
 import "@/components/sass/Page.scss";
 
@@ -16,14 +18,21 @@ export default function About() {
           <div className="img">
             {imgAbout.map((img) => {
               return (
-                <Image
-                  key={img.id}
-                  src={img.img}
-                  alt="about"
-                  quality={100}
-                  width={500}
-                  height={500}
-                />
+                <Fade
+                  triggerOnce
+                  delay={300}
+                  duration={1000}
+                  direction="left"
+                  key={img.id}>
+                  <Image
+                    key={img.id}
+                    src={img.img}
+                    alt="about"
+                    quality={100}
+                    width={500}
+                    height={500}
+                  />
+                </Fade>
               );
             })}
           </div>
@@ -32,12 +41,27 @@ export default function About() {
             {dataAbout.map((item) => {
               return (
                 <div className="box" key={item.id}>
-                  <span>{item.text}</span>
-                  <h1>{item.title}</h1>
-                  <p>{item.desc}</p>
-                  <div className="btn">
-                    <Link href={item.path}>{item.name}</Link>
-                  </div>
+                  <Fade
+                    triggerOnce
+                    delay={300}
+                    duration={1000}
+                    direction="down">
+                    <span>{item.text}</span>
+                  </Fade>
+
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <h1>{item.title}</h1>
+                  </Fade>
+
+                  <Fade triggerOnce delay={300} duration={1000}>
+                    <p>{item.desc}</p>
+                  </Fade>
+
+                  <Fade triggerOnce delay={300} duration={1000} direction="up">
+                    <div className="btn">
+                      <Link href={item.path}>{item.name}</Link>
+                    </div>
+                  </Fade>
                 </div>
               );
             })}

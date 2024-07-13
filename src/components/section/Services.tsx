@@ -1,3 +1,7 @@
+"use client";
+
+import { JackInTheBox, Fade } from "react-awesome-reveal";
+
 import { dataServices, dataHeading } from "@/components/data/Data";
 
 import "@/components/sass/Page.scss";
@@ -11,7 +15,9 @@ export default function Services() {
         {dataHeading.map((item) => {
           return (
             <div className="heading" key={item.id}>
-              <h1>{item.title}</h1>
+              <JackInTheBox triggerOnce delay={300} duration={1000}>
+                <h1>{item.title}</h1>
+              </JackInTheBox>
             </div>
           );
         })}
@@ -20,10 +26,17 @@ export default function Services() {
           {dataServices.map((data) => {
             return (
               <div className="box" key={data.id}>
-                <Image src={data.img} alt={"services"} quality={100} />
+                <Fade triggerOnce delay={300} duration={1000}>
+                  <Image src={data.img} alt={"services"} quality={100} />
+                </Fade>
 
-                <h3>{data.title}</h3>
-                <p>{data.desc}</p>
+                <Fade triggerOnce delay={300} duration={1000} direction="down">
+                  <h3>{data.title}</h3>
+                </Fade>
+
+                <Fade triggerOnce delay={300} duration={1000} direction="up">
+                  <p>{data.desc}</p>
+                </Fade>
               </div>
             );
           })}

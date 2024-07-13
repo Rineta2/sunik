@@ -12,6 +12,8 @@ import { CgMenuRight } from "react-icons/cg";
 
 import { TiTimes } from "react-icons/ti";
 
+import { Fade } from "react-awesome-reveal";
+
 export default function Header() {
   const [show, setShow] = useState(false);
   const [activeLink, setActiveLink] = useState<string | null>("home");
@@ -68,8 +70,13 @@ export default function Header() {
         {navLogo.map((logo) => {
           return (
             <div className="logo" key={logo.id}>
-              <i>{logo.icons}</i>
-              <h3>{logo.title}</h3>
+              <Fade triggerOnce delay={300} duration={1000} direction="left">
+                <i>{logo.icons}</i>
+              </Fade>
+
+              <Fade triggerOnce delay={300} duration={1000} direction="right">
+                <h3>{logo.title}</h3>
+              </Fade>
             </div>
           );
         })}
@@ -78,14 +85,20 @@ export default function Header() {
           {dataHeader.map((link) => {
             return (
               <li key={link.id} className="nav__item">
-                <Link
-                  href={link.path}
-                  className={`nav__link ${
-                    activeLink === link.active ? "active" : ""
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <Fade
+                  triggerOnce
+                  delay={link.id * 100}
+                  duration={1000}
+                  direction="down">
+                  <Link
+                    href={link.path}
+                    className={`nav__link ${
+                      activeLink === link.active ? "active" : ""
+                    }`}
+                    onClick={() => setShow(false)}>
+                    {link.name}
+                  </Link>
+                </Fade>
               </li>
             );
           })}
