@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 
-import { Fragment } from "react";
-
+import { Fragment, Suspense } from "react";
 import { ComponentType } from "react";
 
 const Home: ComponentType<{}> = dynamic(
@@ -56,13 +55,15 @@ const Contact: ComponentType<{}> = dynamic(
 export default function page() {
   return (
     <Fragment>
-      <Home />
-      <About />
-      <Services />
-      <Banner />
-      <Product />
-      <Testimonials />
-      <Contact />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Home />
+        <About />
+        <Services />
+        <Banner />
+        <Product />
+        <Testimonials />
+        <Contact />
+      </Suspense>
     </Fragment>
   );
 }
